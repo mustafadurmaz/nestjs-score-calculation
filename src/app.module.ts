@@ -4,24 +4,28 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type:"mssql",
-      host:"213.238.179.152",
-      port:1433,
-      username: "testuser",
-      password: "Ankara123*",
-      database: "TestDatabase",
-      options: {
-        encrypt: false, // MSSQL-specific option
-      },
-      synchronize: true, //use this with development environment
-      entities: [User],
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: (configService: ConfigService) => ({
+        type: 'mssql',
+        host: configService.get<string>('DATABASE_HOST'),
+        port: parseInt(configService.get<string>('DATABASE_PORT')),
+        username: configService.get<string>('DATABASE_USER'),
+        password: configService.get<string>('DATABASE_PASS'),
+        database: configService.get<string>('DATABASE_NAME'),
+        options: {
+          encrypt: false, // MSSQL-specific option
+        },
+        entities: [__dirname + '/**/*.entity{.ts,.js}'],
+        synchronize: true,
+      }),
+      inject: [ConfigService],
     }),
-    UserModule],
-  controllers: [AppController],
-  providers: [AppService],
+  ],
 })
 export class AppModule {}
