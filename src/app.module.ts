@@ -29,5 +29,7 @@ import { CitiesModule } from './cities/cities.module';
     }),
     CitiesModule,
   ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
