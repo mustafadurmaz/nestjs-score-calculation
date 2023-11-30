@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { CitiesModule } from './cities/cities.module';
+import { YksLisansModule } from './yks-lisans/yks-lisans.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { CitiesModule } from './cities/cities.module';
       inject: [ConfigService],
     }),
     CitiesModule,
+    YksLisansModule,
   ],
   controllers: [AppController],
   providers: [AppService],
