@@ -5,73 +5,73 @@ export class YksLisansEntity {
   @PrimaryGeneratedColumn()
   ProgramKodu: number;
 
-  @Column()
-  UniversiteTuru?: string;
+  @Column({ nullable: true})
+  UniversiteTuru: string;
 
-  @Column()
+  @Column({ nullable: true})
   Sehir: string;
 
-  @Column()
+  @Column({ nullable: true})
   UniversiteAdi: string;
 
-  @Column()
+  @Column({ nullable: true})
   FakulteYuksekOkulAdi: string;
 
-  @Column()
+  @Column({ nullable: true})
   ProgramAdi: string;
 
-  @Column()
+  @Column({ nullable: true})
   PuanTuru: string;
 
-  @Column()
+  @Column({ nullable: true})
   Kontenjan: number;
 
-  @Column()
+  @Column({ nullable: true})
   Yerlesen: number;
 
-  @Column()
+  @Column({ nullable: true})
   TabanPuan: number;
 
-  @Column()
+  @Column({ nullable: true})
   OkulBirincisiYerlestirmeKontenjani: number;
 
-  @Column()
+  @Column({ nullable: true})
   OkulBirincisiYerlestirmeYerlesen: number;
 
-  @Column()
+  @Column({ nullable: true})
   OkulBirincisiYerlestirmeEnKucukPuan: number;
 
-  @Column()
+  @Column({ nullable: true})
   OkulBirincisiYerlestirmeEnBuyukPuan: number;
 
-  @Column()
+  @Column({ nullable: true})
   DepremzedeYerlestirmeKontenjan: number;
 
-  @Column()
+  @Column({ nullable: true})
   DepremzedeYerlestirmeYerlesen: number;
 
-  @Column()
+  @Column({ nullable: true})
   DepremzedeYerlestirmeEnKucukPuan: number;
 
-  @Column()
+  @Column({ nullable: true})
   DepremzedeYerlestirmeEnBuyukPuan: number;
 
-  @Column()
+  @Column({ nullable: true})
   _34YasUstuKadinYerlestirmeKontenjan: number;
 
-  @Column()
+  @Column({ nullable: true})
   _34YasUstuKadinYerlestirmeYerlesen: number;
 
-  @Column()
+  @Column({ nullable: true})
   _34YasUstuKadinYerlestirmeEnKucukPuan: number;
 
-  @Column()
+  @Column({ nullable: true})
   _34YasUstuKadinYerlestirmeEnBuyukPuan: number;
 
-  @Column()
+  @Column({ nullable: true})
   Aktif: number;
 
-  @Column()
+  @Column({ nullable: true})
   Yil: number;
 
 }

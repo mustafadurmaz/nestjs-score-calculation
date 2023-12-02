@@ -25,6 +25,7 @@ import { YksLisansModule } from './yks-lisans/yks-lisans.module';
         },
         entities: [__dirname + '/**/*.entity{.ts,.js}'],
         synchronize: true,
+        connectionTimeout:30000
       }),
       inject: [ConfigService],
     }),
