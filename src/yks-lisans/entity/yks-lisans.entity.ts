@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('OSYM_LISANS_2023')
+@Entity('2023_OSYM_LISANS')
 export class YksLisansEntity {
   @PrimaryGeneratedColumn()
   ProgramKodu: number;

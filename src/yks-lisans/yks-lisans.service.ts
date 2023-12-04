@@ -10,6 +10,8 @@ export class YksLisansService {
         private yksLisansRepository: Repository<YksLisansEntity>,
     ){}
     async showAllUniversities(){
-        return await this.yksLisansRepository.find();
+        return await this.yksLisansRepository.find({
+            take: 100, 
+        });
     }
 }
