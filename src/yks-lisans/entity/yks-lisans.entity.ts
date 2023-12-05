@@ -56,22 +56,22 @@ export class YksLisansEntity {
   @Column({ nullable: true})
   DepremzedeYerlestirmeEnBuyukPuan: number;
 
-  @Column({ nullable: true})
-  _34YasUstuKadinYerlestirmeKontenjan: number;
+  // @Column({ nullable: true})
+  // _34YasUstuKadinYerlestirmeKontenjan: number;
 
-  @Column({ nullable: true})
-  _34YasUstuKadinYerlestirmeYerlesen: number;
+  // @Column({ nullable: true})
+  // _34YasUstuKadinYerlestirmeYerlesen: number;
 
-  @Column({ nullable: true})
-  _34YasUstuKadinYerlestirmeEnKucukPuan: number;
+  // @Column({ nullable: true})
+  // _34YasUstuKadinYerlestirmeEnKucukPuan: number;
 
-  @Column({ nullable: true})
-  _34YasUstuKadinYerlestirmeEnBuyukPuan: number;
+  // @Column({ nullable: true})
+  // _34YasUstuKadinYerlestirmeEnBuyukPuan: number;
 
-  @Column({ nullable: true})
-  Aktif: number;
+  // @Column({ nullable: true})
+  // Aktif: number;
 
-  @Column({ nullable: true})
-  Yil: number;
+  // @Column({ nullable: true})
+  // Yil: number;
 
 }
